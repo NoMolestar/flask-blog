@@ -18,6 +18,7 @@ _mailinglist
 .idea/
 docs/_build/
 .vscode
+flask.sqlite
 /python3-virtualenv
 python3-virtualenv/
 
