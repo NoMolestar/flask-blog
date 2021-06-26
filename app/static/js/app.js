@@ -8,6 +8,10 @@ addEventListener('DOMContentLoaded', () => {
     }
 })
 
+<<<<<<< HEAD
+=======
+//Ejecutando funciones
+>>>>>>> 47171ed2d5173a30400a07d10373d4530a85db61
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
 document.getElementById("btn__registrarse").addEventListener("click", register);
 window.addEventListener("resize", anchoPage);
