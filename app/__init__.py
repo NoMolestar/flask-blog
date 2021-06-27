@@ -52,6 +52,7 @@ def index():
 def health():
     return "Good health",200
 
+
 @app.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
