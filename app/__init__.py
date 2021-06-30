@@ -1,10 +1,10 @@
 import os
-import db
+#import db
 from flask import Flask, render_template, send_from_directory, request
 from dotenv import load_dotenv
 from flask_mail import Mail, Message 
 from werkzeug.security import check_password_hash, generate_password_hash
-from db import get_db
+#from db import get_db
 
 load_dotenv()
 app = Flask(__name__)
@@ -15,7 +15,7 @@ app.config.from_mapping(
     DATABASE=os.path.join(os.getcwd(), 'flask.sqlite')
 )
 
-db.init_app(app)
+#db.init_app(app)
 
 # Configuration for flask_mail 
 # # This setup is specifically for gmail, other email servers have different configuration settings 
@@ -53,6 +53,7 @@ def index():
 def health():
     return "Good health",200
 
+"""
 @app.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
@@ -105,7 +106,7 @@ def login():
             return error, 418
     
     ## TODO: Return a login page
-    return render_template('login.html', title="Moisés Chávez - Login", url=os.getenv("URL"))
+    return render_template('login.html', title="Moisés Chávez - Login", url=os.getenv("URL"))"""
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=False)
