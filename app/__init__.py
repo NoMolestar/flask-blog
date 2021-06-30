@@ -1,10 +1,10 @@
 import os
+import db
 from flask import Flask, render_template, send_from_directory, request
 from dotenv import load_dotenv
 from flask_mail import Mail, Message 
 from werkzeug.security import check_password_hash, generate_password_hash
-from app.db import get_db
-from . import db
+from db import get_db
 
 load_dotenv()
 app = Flask(__name__)
@@ -31,6 +31,7 @@ app.config['MAIL_PASSWORD'] = os.getenv("EMAIL_PASSWORD")
 # Emails are managed through a mail instance 
 mail = Mail(app)
 
+
 @app.route('/', methods=["GET", "POST"])
 def index():
     if request.method == "POST":
@@ -51,7 +52,6 @@ def index():
 @app.route('/health', methods=["GET", "POST"])
 def health():
     return "Good health",200
-
 
 @app.route('/register', methods=('GET', 'POST'))
 def register():
