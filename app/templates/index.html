@@ -1,161 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta property="og:title" content="Personal Portfolio">
-        <meta property="og:description" content="My Personal Portfolio">
-        <meta property="og:url" content="{{ url }}">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <link rel="stylesheet" href="./static/styles/styles.css">
-        <link rel="stylesheet" href="./static/styles/main.css">
-        <title>Your name | Resume</title>
-        <script src="./static/js/app.js" defer></script>
-        <script src="https://kit.fontawesome.com/3354552753.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/styles/styles.css">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <title>Moisés Chávez - Portfolio</title>
     </head>
     <body>
-        <!-- // Intro -->
-        <nav class="menu">
-            <label class="logo">Portfolio</label>
-            <ul class="menu_item">
-                <li class="active"><a href="#about">Start</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <span class="btn_menu">
-            <i class="fa fa-bars"></i>
-        </span>
-        <br><br>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#about" class="nav__logo">Moisés</a>
+                </div>
 
-        {% if success %}
-            <div class="alert alert-success" role="alert">
-                Your message has been sent successfully!
-            </div>
-        {% endif %}
-
-        <section id="work" class="work_container">
-            <h1>Projects</h1>
-            <div class="container">
-              <main class="grid_work">
-               
-                <article>
-                  <img src="https://github.com/OscarFM014/Diversify/blob/master/assets/img/organillero.jpg?raw=true" alt="Sample photo">
-                  <div class="text">
-                    <h3>Diversify</h3>
-                    <p>Page that help to join people by local experiences</p>
-                    <a href="https://github.com/OscarFM014/Diversify" target="_blank"><button>Learn More</button></a>
-                  </div>
-                </article>
-                <article>
-                  <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F49541620%2F238733775792%2F1%2Foriginal.jpg?auto=compress&s=7330ad11e5f6af8de0aee892daf4432c" alt="Sample photo">
-                  <div class="text">
-                    <h3>Social Data Challenge 1.0</h3>
-                    <p>Model that predict the air pollution in my city using Python and Pandas</p>
-                    <a href="https://github.com/OscarFM014/Social_Data_Challenge-Datalab" target="_blank"><button>Learn More</button></a>
-                  </div>
-                </article>
-                <article>
-                  <img src="https://pbs.twimg.com/media/EhHGCBGXcAAhK1j.jpg" alt="Sample photo">
-                  <div class="text">
-                    <h3>Social Data Challenge 3.0</h3>
-                    <p>Model that predict the number of unemployed during the pandemic using Python in Jupiter Notebooks</p>
-                    <a href="https://github.com/OscarFM014/SDC3.0" target="_blank"><button>Learn More</button></a>
-                  </div>
-                </article>
-                <article>
-                  <img src="https://digitaldefynd.com/wp-content/uploads/2018/07/best-data-structures-and-algorithms-course-tutorials-certification-class-online.jpg" alt="Sample photo">
-                  <div class="text">
-                    <h3>Data Structures and Algorithms</h3>
-                    <p>Coding data structures and algorithms in Python</p>
-                    <a href="https://github.com/OscarFM014/DataStructuresAlgorithms" target="_blank"><button>Learn More</button></a>
-                  </div>
-                </article>
-              </main>
-            </div>
-          </section>
-        
-
-
-
-        <div class="contact-container">
-            <div class="contact-form">
-                <form method="POST" >
-                    <h4>Interested in working together? Let's chat!</h4>
-                    <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Name</label>
-                    <input name="name" type="text" class="form-control" id="name-input" aria-describedby="nameHelp" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message-input" class="form-label">Message</label>
-                        <textarea name="message" class="form-control" id="message-input" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>  
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-        </div>
-        <footer>
-            <div class="container">
-                <div class="sec aboutus">
-                    <h2>About me</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Ut, quam. Sed, necessitatibus. Alias quisquam optio expedita. 
-                        Consectetur aliquam sint perspiciatis! 
-                        Maxime nemo nulla officiis tempora hic placeat amet delectus sit.
-                    </p>
-                    <ul class="sci">
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
-                <div class="sec quickLinks">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Terms & Consitions</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
                 </div>
-                <div class="sec contact">
-                    <h2>Contact Info</h2>
-                    <ul class="info">
-                        <li>
-                            <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                            <span>Madrid 2440<br>
-                                Guadalajara, Jal 45400,<br>Mex</span>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                            <p><a href="tel:12345678900">+1 234 567 8900</a><br>
-                                <a href="tel:12345678900">+1 234 567 8900</a></p>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                            <p><a href="mailto:example@email.com">example@email.com</a></p>
-                        </li>
-                    </ul>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Moisés</span><br> Programmer</h1>
+
+                    <a href="#contact" class="button">Contact</a>
                 </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/moises-chavez-itesm/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/NoMolestar" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">    
+                    <img src="../static/img/perfil.jpg" alt="Perfil Image">
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="../static/img/about.jpg" alt="About Image">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I am Moisés</h2>
+                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <img class="skills__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAADHElEQVRIS8WWP2gTURzHv7+XFOtkXUWw4irYTvYqSa80B46dRFCxTo5NB8Gt6SSK0HRyNKlDcaub0Cu9XjQnDtrRMYLuiQhGktxP3uWu3t/krog9CIR7797n/f59fz/CKT10SlycCHygqlNnJ+z78tK/eqK+aBjtrAZkBltaYYWYNhmYkjAC2swoK/tmPQs8NdgqqSrBlsCZOAABRwyxpuiGkeYCY8HWTXUaPV4H8UqaA8FUwwRtKG+N1qj9iWAZx8m8vUpA2XNrKrDnfqDa7YutpPjHgmUcYdM6CNMJsEMGnISiYawXYvcxWgxem99v7IbXI2BLK9bAcDI29HQwtKIatsIJR9+WoVhPuOhTRTcf+9ei4FKR46A2CfXGnnE0yt3vNXVGsC2T69xwH/8A8AmgWUU3nSrwnjTgThqod6AL/8yEjwRcAOOiXFN0M8BKA95QdLPiv+2HpcJdEGkAfgJiZ0433oXALwDM+b/JDO72xXl/TK1S8TWAWwGXEz/r9nJPJnO8mVR2WcGHim6qHkRaykSvonFmQ8bRjW0H4DZAlwB0wNQC8bVMYAbezOvmsgdqlgrbBLrnS5AGA1cgY3n8kh+Acy3AroC4hlzOQN+u+Q1wyzB4f8uX1WGwpS3sgPk2CF/A6AO4GrGePPBA6kB9CB68VPTGYpasDri6qRUfgnGHgEJSWblNoy3FR/4HpIhgJpOrncPz4rJfd2MFhlDv9kR5csKuJohP9nIi4NGcbj73W+hIKshNOjaUvUYtWE6DXTe5jj/LYvF3AN8AXLdJzI5TrbCAhEORAlyQmixl7riMZKwGJBbHwaVq5dg+iOtmY8FNrVglxmpC8lSQF/Vwr3WbhGwsAYXzzmDG1vy+WR6Z1XKxuVRYJkI1HKe/H7JBEE5bZNhTfu8EL8xf5ViUqi16H7qDgLyl/LndJqmIIu8TW6hPfEYf5rhxYFeSyiQqIFI0ROXEo0/4QDnsOTKYNG0Ah4Co/LNhL3IBWcNMVZ/7OyAu+2s5TUDGTplxh8j4n8kPnKnzdz9X+y8DfRpr0uw5kcVpDh635w/L+2ouPp0bUwAAAABJRU5ErkJggg=="/>
+                                <span class="skills__name">C++</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-copyright skills__icon'></i>
+                                <span class="skills__name">C</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-coffee-alt skills__icon'></i>
+                                <span class="skills__name">Java</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">60%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-data skills__icon' ></i>
+                                <span class="skills__name">SQL</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="../static/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== PROJECTS =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Projects</h2>
+                <div class="work__container bd-grid">
+                    <article class="work__img">
+                        <div class="work__img">
+                            <img src="../static/img/work1.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Diversify</h3>
+                            <p>Page that help to join people by local experiences and discover new places</p><br>
+                            <a href="https://github.com/OscarFM014/Diversify" target="_blank"><button>Learn More</button></a>
+                        </div>
+                    </article>
+                    <article class="work__img">
+                        <div class="work__img">
+                            <img src="../static/img/work2.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Social Data Challenge 1.0</h3>
+                            <p>Model that predict the air pollution in my city using Python and Pandas</p>
+                            <br>
+                            <a href="https://github.com/OscarFM014/Social_Data_Challenge-Datalab" target="_blank"><button>Learn More</button></a>
+                        </div>
+                    </article>
+                    <article class="work__img">
+                        <div class="work__img">
+                            <img src="../static/img/work4.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Social Data Challenge 3.0</h3>
+                            <p>Model that predict the number of unemployed during the pandemic using Python in Jupiter Notebooks</p><br>
+                            <a href="https://github.com/OscarFM014/SDC3.0" target="_blank"><button>Learn More</button></a>
+                        </div>
+                    </article>
+                    <article class="work__img">
+                        <div class="work__img">
+                            <img src="../static/img/work5.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Data Structures and Algorithms</h3>
+                            <p>Coding data structures and algorithms in Python</p><br>
+                            <a href="https://github.com/OscarFM014/DataStructuresAlgorithms" target="_blank"><button>Learn More</button></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact__container bd-grid" >
+                    <form class="contact__form" method="POST">
+                        <h4 class="">Interested in working together? Let's chat!</h4>
+                        <input type="text" placeholder="Name" class="contact__input" required>
+                        <input type="mail" placeholder="Email" class="contact__input" required>
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input" required></textarea>
+                        <button type="submit" class="contact__button button">Submit</button>
+                    </form>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Carlos Moisés Chávez Jiménez</p>
+            <p class="footer__contact"><a href="mailto:carlosmoiseschavezjimenez@gmail.com"><i class='bx bx-mail-send'></i> carlosmoiseschavezjimenez@gmail.com</a></p>
+            <p><a href="tel:3318692925"><i class='bx bxs-phone'></i>+52 33186 92925</a></p><br>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/MoyChavezJim" target="_blank" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/iamoy13/" target="_blank" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/iamoy13" target="_blank" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
+            <p>Copyright &#169; 2021 all right reserved</p>
         </footer>
-        <div class="copyrightText">
-            <p>Copyright © 2021 All rights reserved</p>
-        </div>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="../static/js/main.js"></script>
     </body>
 </html>

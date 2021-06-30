@@ -16,7 +16,7 @@ app.config.from_mapping(
 )
 
 db.init_app(app)
-   
+
 # Configuration for flask_mail 
 # # This setup is specifically for gmail, other email servers have different configuration settings 
 app.config['MAIL_SERVER'] = "smtp.gmail.com"
@@ -46,7 +46,7 @@ def index():
         # success value determines that success alert will appear 
         return render_template('index.html', success=True , title="MLH Fellow", url=os.getenv("URL"))
 
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+    return render_template('index.html', title="Moisés Chávez - Index", url=os.getenv("URL"))
 
 @app.route('/health', methods=["GET", "POST"])
 def health():
@@ -81,7 +81,7 @@ def register():
             return error, 418
 
     ## TODO: Return a restister page
-    return "Register Page not yet implemented", 501
+    return render_template('register.html', title="Moisés Chávez - Register", url=os.getenv("URL"))
 
 @app.route('/login', methods=('GET', 'POST'))
 def login():
@@ -105,7 +105,7 @@ def login():
             return error, 418
     
     ## TODO: Return a login page
-    return "Login Page not yet implemented", 501
+    return render_template('login.html', title="Moisés Chávez - Login", url=os.getenv("URL"))
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=False)

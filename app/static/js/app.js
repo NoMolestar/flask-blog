@@ -1,17 +1,4 @@
-addEventListener('DOMContentLoaded', () => {
-    const btn = document.querySelector('.btn_menu')
-    if(btn){
-        btn.addEventListener('click', () => {
-            const items = document.querySelector('.menu_item')
-            items.classList.toggle('show')
-        })
-    }
-})
-
-<<<<<<< HEAD
-=======
 //Ejecutando funciones
->>>>>>> 47171ed2d5173a30400a07d10373d4530a85db61
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
 document.getElementById("btn__registrarse").addEventListener("click", register);
 window.addEventListener("resize", anchoPage);
