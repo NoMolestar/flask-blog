@@ -6,7 +6,7 @@ services:
       - "80:80"
     restart: always
     env_file:
-      - example.env
+      - ./example.env
     volumes:
       - .:/myportfolio
     depends_on:
@@ -16,7 +16,7 @@ services:
     image: postgres
     restart: always
     env_file:
-      - example.env
+      - ./example.env
 
   nginx:
     image: jonasal/nginx-certbot:latest
