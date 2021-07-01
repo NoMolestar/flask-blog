@@ -8,4 +8,4 @@ RUN pip3 install -r requirements.txt
 COPY . /myportfolio
 
 RUN chmod u+x ./entrypoint.sh
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["sh","./entrypoint.sh"]
