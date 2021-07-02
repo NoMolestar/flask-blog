@@ -215,9 +215,9 @@ img{
 }
 .home__img{
   position: absolute;
-  right: 0;
+  right: 5%;
   bottom: 0;
-  width: 195px;
+  width: 245px;
 }
 
 .home__img img{
