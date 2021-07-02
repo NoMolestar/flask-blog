@@ -217,7 +217,7 @@ img{
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 295px;
+  width: 195px;
 }
 
 .home__img img{
@@ -502,7 +502,7 @@ p a:visited {
     margin-right: var(--mb-4);
   }
   .home__img{
-    width: 257px;
+    width: 457px;
     bottom: 15%;
   }
 
@@ -533,7 +533,6 @@ p a:visited {
     margin-right: auto;
   }
   .home__img{
-    width: 257px;
     right: 10%;
   }
 }
