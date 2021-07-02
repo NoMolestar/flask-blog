@@ -502,7 +502,7 @@ p a:visited {
     margin-right: var(--mb-4);
   }
   .home__img{
-    width: 457px;
+    width: 357px;
     bottom: 15%;
   }
 
@@ -533,6 +533,7 @@ p a:visited {
     margin-right: auto;
   }
   .home__img{
+    width: 357px;
     right: 10%;
   }
 }
