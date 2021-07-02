@@ -214,7 +214,7 @@ img{
   color: var(--first-color);
 }
 .home__img{
-  position: absolute;
+  position: relative;
   right: 40px;
   bottom: 0;
   width: 255px;
