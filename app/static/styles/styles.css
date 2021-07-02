@@ -215,9 +215,10 @@ img{
 }
 .home__img{
   position: relative;
-  right: 40px;
-  bottom: 0;
-  width: 255px;
+  right: 10%;
+  bottom: 10%;
+  left: 40%;
+  width: 265px;
 }
 
 .home__img img{
