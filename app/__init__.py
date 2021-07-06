@@ -3,8 +3,8 @@ from flask import Flask, render_template, send_from_directory, request
 from dotenv import load_dotenv
 from flask_mail import Mail, Message
 from werkzeug.security import check_password_hash, generate_password_hash
-import SQLAlchemy
-import Migrate
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 load_dotenv()
 app = Flask(__name__)
