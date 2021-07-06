@@ -31,4 +31,4 @@ jobs:
       #- name: Print project root directory
       #  run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
       - name: Deploy site
-        run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && sudo git fetch && sudo git reset --hard origin/master && sudo docker-compose up -d --build'
+        run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && sudo git fetch && sudo git reset --hard origin/master && sudo docker-compose down && sudo docker-compose up -d --build'
