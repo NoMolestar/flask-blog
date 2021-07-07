@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deployment Test
-        run: env.TESTING = $(bash prod-test.sh)
+        run: env.TESTING = $(bash /home/centos/flask-blog/prod-test.sh)
 
       - name: Discord Notification Success
         if: ${{ success() && env.TESTING == 0 }}
