@@ -33,5 +33,13 @@ jobs:
       - name: Deploy site
         run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && sudo git fetch && sudo git reset --hard origin/master && sudo docker-compose down && sudo docker-compose up -d --build'
 
-      - name: Deployment Successful
+      #- name: Deployment Successful
+      #  run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
+
+      - name: Deployment Test
+        uses: actions/checkout@v2
+        run: testing = $(bash prod-test.sh)
+        if: ${{ success() && testing == 0 }}
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
+        if: ${{ failure() || testing != 0 }}
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
