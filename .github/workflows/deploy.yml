@@ -44,8 +44,10 @@ jobs:
       - name: Deployment Test
         run: env.TESTING = $(bash prod-test.sh)
 
-      - name: Discord Notification
+      - name: Discord Notification Success
         if: ${{ success() && env.TESTING == 0 }}
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
+
+      - name: Discord Notification Failed
         if: ${{ failure() || env.TESTING != 0 }}
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
