@@ -10,6 +10,8 @@ jobs:
   deploy:
     name: "Deploy to AWS EC2 Virtual Machine"
     runs-on: ubuntu-latest
+    env:
+      TESTING: 0
     steps:
       - name: Configure SSH
         run: |
@@ -40,8 +42,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deployment Test
-        run: testing = $(bash prod-test.sh)
-        if: ${{ success() && testing == 0 }}
+        run: env.TESTING = $(bash prod-test.sh)
+
+      - name: Discord Notification
+        if: ${{ success() && env.TESTING == 0 }}
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
-        if: ${{ failure() || testing != 0 }}
+        if: ${{ failure() || env.TESTING != 0 }}
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
