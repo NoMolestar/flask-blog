@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deployment Test
-        run: env.TESTING = ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && bash prod-test.sh'
+        run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && bash prod-test.sh'
 
       - name: Discord Notification Success
         if: ${{ success() && env.TESTING == 0 }}
