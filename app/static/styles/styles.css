@@ -330,36 +330,13 @@ img{
 
 .work_container{
   padding : 20px;
-  /* box-shadow: 0px 15px 10px -15px rgb(0, 0, 0); */
   margin-bottom: 50px;
 }
 
-/*.work_container h1{
-  color: black;
-  font-weight: normal;
-  margin: 10px;
-  padding: 5px;
-  font-size: 30px;
-  font-weight: 700;
-}*/
-
-/*.grid_work { 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
-}
-  
-.grid_work > article {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-}
-.grid_work > article div img {
-  max-width: 100%;
-}*/
 .text {
   padding: 0 20px 20px;
 }
+
 .text button {
   background: var(--second-color);
   border: 0;
